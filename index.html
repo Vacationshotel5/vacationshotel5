@@ -1,0 +1,149 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Vacations Hotel5</title>
+  <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+  <header>
+    <div class="logo">
+      <img src="logo.png" alt="Vacations Hotel5">
+    </div>
+    <nav>
+      <ul>
+        <li><a href="#inicio">Inicio</a></li>
+        <li><a href="#servicios">Servicios</a></li>
+        <li><a href="#contacto">Contacto</a></li>
+      </ul>
+    </nav>
+  </header>
+
+  <section id="inicio" class="hero">
+    <h1>Vacations Hotel5</h1>
+    <p>Descubre experiencias inolvidables en hoteles de 5 estrellas.</p>
+    <a href="#contacto" class="btn">Contáctanos</a>
+  </section>
+
+  <section id="servicios">
+    <h2>Nuestros Servicios</h2>
+    <div class="servicios-container">
+      <div class="servicio">
+        <h3>Hoteles de Lujo</h3>
+        <p>Descubre los mejores destinos con hoteles de 5 estrellas.</p>
+      </div>
+      <div class="servicio">
+        <h3>Paquetes Personalizados</h3>
+        <p>Organiza tu viaje a medida con nuestra asesoría especializada.</p>
+      </div>
+      <div class="servicio">
+        <h3>Atención 24/7</h3>
+        <p>Soporte para que disfrutes sin preocupaciones.</p>
+      </div>
+    </div>
+  </section>
+  
+  <section id="destinos">
+    <h2>Destinos Exclusivos</h2>
+    <div class="destinos-container">
+      <div class="destino">
+        <h3><a href="#" onclick="mostrarDescripcion('riviera-nayarit')">Riviera Nayarit (México)</a></h3>
+        <p id="riviera-nayarit" class="descripcion-destino">
+          A lo largo de una costa bañada por el Pacífico, esta región ofrece calas vírgenes flanqueadas por palmeras y montañas. Es el refugio ideal para los viajeros que buscan privacidad, bienestar y experiencias diseñadas a medida. El entorno combina selva tropical y playas largas de arena dorada, perfectas para relajarse junto a piscinas infinitas o explorar islas escondidas. Actividades como senderismo, pesca deportiva y visitas a pueblos mágicos complementan su atractivo.
+        </p>
+      </div>
+      <div class="destino">
+        <h3><a href="#" onclick="mostrarDescripcion('riviera-maya')">Riviera Maya (México)</a></h3>
+        <p id="riviera-maya" class="descripcion-destino">
+          Una franja paradisíaca que alterna jungla, cenotes y el Mar Caribe turquesa. Entre la exuberancia natural y el lujo contemporáneo, destacan villas con piscinas privadas y spas inmersos en la naturaleza. La cultura maya está presente en cada rincón, desde ruinas como Tulum hasta rituales ancestrales. Ideal para quienes desean combinar relajación en playas blancas con gastronomía de alto nivel y bienestar holístico.
+        </p>
+      </div>
+      <div class="destino">
+        <h3><a href="#" onclick="mostrarDescripcion('punta-cana')">Punta Cana & Cap Cana (República Dominicana)</a></h3>
+        <p id="punta-cana" class="descripcion-destino">
+          Bandas de arena blanca bordeadas por aguas cálidas y transparentes hacen de Punta Cana y Cap Cana sinónimos de elegancia tropical. En Cap Cana, la exclusividad adquiere un nuevo nivel con campos de golf de campeonato, marinas de lujo y espectaculares paisajes. Ideal para experiencias premium como vela, pesca en alta mar, golf y cenas gourmet junto al mar, ofrece un retiro sofisticado y refinado.
+        </p>
+      </div>
+      <div class="destino">
+        <h3><a href="#" onclick="mostrarDescripcion('montego-bay')">Montego Bay (Jamaica)</a></h3>
+        <p id="montego-bay" class="descripcion-destino">
+          Montego Bay combina tradiciones caribeñas auténticas con resorts de primera clase y servicios boutique. Rodeado de colinas y playas bañadas por el sol, es ideal para aventuras suaves como rafting o exploraciones culturales locales. Su oferta wellness destaca en spas de alto nivel y experiencias gastronómicas que fusionan sabores jamaicanos con técnicas modernas. Un destino vibrante, sensorial y con mucho estilo.
+        </p>
+      </div>
+      <div class="destino">
+        <h3><a href="#" onclick="mostrarDescripcion('salvador')">Salvador de Bahía (Brasil)</a></h3>
+        <p id="salvador" class="descripcion-destino">
+          Una mezcla de cultura afrobrasileña, arquitectura colonial y playas doradas convierte a Salvador en un crisol de historia y ritmo. Un paseo por su centro histórico revela iglesias barrocas y balcones llenos de color. La música, la danza y la gastronomía local, especialmente el acarajé y la moqueca, ofrecen un festín cultural. Sus playas cercanas son el refugio perfecto para el eco‑lujo y la autenticidad.
+        </p>
+      </div>
+      <div class="destino">
+        <h3><a href="#" onclick="mostrarDescripcion('ibiza')">Ibiza (España)</a></h3>
+        <p id="ibiza" class="descripcion-destino">
+          Más allá de su fama como epicentro de fiesta, Ibiza muestra un lado íntimo y elegantísimo: calas recónditas, fincas y villas de lujo, y una escena wellness naciente. La isla rezuma sofisticación mediterránea; desde paseos en yate al atardecer hasta experiencias de gastronomía saludable en entornos naturales. Una escapada íntima y selecta, perfecta para recargar energías con estilo.
+        </p>
+      </div>
+    </div>
+  </section>
+
+
+
+  <section id="contacto">
+    <h2>Contacto</h2>
+    <form id="contactForm">
+      <input type="text" name="nombre" placeholder="Nombre" required>
+      <input type="email" name="email" placeholder="Correo electrónico" required>
+      <textarea name="mensaje" placeholder="Mensaje" required></textarea>
+      <button type="submit">Enviar Mensaje</button>
+    </form>
+    <div class="redes">
+      <a href="https://www.facebook.com/profile.php?id=61555767188440" target="_blank">🌐 Facebook</a>
+      <a href="https://www.instagram.com/vacationshotel5/" target="_blank">📸 Instagram</a>
+      <a href="https://www.tiktok.com/@vacationshotel5" target="_blank">🎵 TikTok</a>
+    </div>
+  </section>
+
+  <footer>
+    <p>&copy; 2025 Vacations Hotel5. Todos los derechos reservados.</p>
+  </footer>
+
+  <script src="script.js"></script>
+
+<script>
+function mostrarDescripcion(id) {
+  var descripcion = document.getElementById(id);
+  if (descripcion.style.display === "block") {
+    descripcion.style.display = "none";
+  } else {
+    descripcion.style.display = "block";
+  }
+}
+window.onload = function() {
+  var descripciones = document.getElementsByClassName('descripcion-destino');
+  for (var i = 0; i < descripciones.length; i++) {
+    descripciones[i].style.display = 'none';
+  }
+};
+</script>
+
+
+<div id="modal-destino" class="modal">
+  <div class="modal-content">
+    <span class="close-button" onclick="cerrarModal()">&times;</span>
+    <div id="contenido-modal"></div>
+  </div>
+</div>
+
+<script>
+function mostrarDescripcion(id) {
+  const descripcion = document.getElementById(id).innerHTML;
+  document.getElementById('contenido-modal').innerHTML = '<h2>' + document.querySelector('#' + id).previousElementSibling.innerText + '</h2>' + descripcion + '<div class="galeria-fotos">Aquí irán tus fotos.</div>';
+  document.getElementById('modal-destino').style.display = 'block';
+}
+
+function cerrarModal() {
+  document.getElementById('modal-destino').style.display = 'none';
+}
+</script>
+</body>
+</html>
