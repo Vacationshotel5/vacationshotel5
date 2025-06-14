@@ -82,9 +82,14 @@
         <p id="ibiza" class="descripcion-destino">
           Más allá de su fama como epicentro de fiesta, Ibiza muestra un lado íntimo y elegantísimo: calas recónditas, fincas y villas de lujo, y una escena wellness naciente. La isla rezuma sofisticación mediterránea; desde paseos en yate al atardecer hasta experiencias de gastronomía saludable en entornos naturales. Una escapada íntima y selecta, perfecta para recargar energías con estilo.
         </p>
-      </div>
-    </div>
-  </section>
+      </div> 
+     <div class="destino">
+        <h3><a href="#" onclick="mostrarDescripcion('costa-mujeres')">Cancun (Mexico)</a></h3>
+        <p id="costa-mujeres" class="descripcion-destino">
+          Una joya escondida al norte de Cancún, Costa Mujeres combina playas prístinas de arena blanca con un entorno natural casi virgen. Este exclusivo rincón ofrece resorts de lujo con vistas al mar Caribe, spas de clase mundial y experiencias gastronómicas de primer nivel. Ideal para viajeros que buscan desconexión total, privacidad y bienestar, sin renunciar al confort. Ya sea navegando en catamarán, practicando snorkel en aguas cristalinas o disfrutando de una cena frente al atardecer, Costa Mujeres invita a relajarse con elegancia en un paraíso reservado.
+        </p>
+      </div>   
+   </section>
 
 
 
@@ -119,12 +124,34 @@
 
 <script>
 function mostrarDescripcion(id) {
-  var descripcion = document.getElementById(id);
-  if (descripcion.style.display === "block") {
-    descripcion.style.display = "none";
-  } else {
-    descripcion.style.display = "block";
-  }
+  const descripcion = document.getElementById(id).innerHTML;
+  const titulo = document.querySelector('#' + id).previousElementSibling.innerText;
+
+  const imagenesPorDestino = {
+    'riviera-nayarit': ['img/riviera-nayarit.jpg'],
+    'riviera-maya': ['img/Rivera maya.jpg'],
+    'punta-cana': ['img/cap cana.jpg', 'img/punta cana.jpg'],
+    'montego-bay': ['img/Montego Bay.jpg'],
+    'salvador': ['img/Salvador de bahia.jpg'],
+    'ibiza': ['img/ibiza.jpg'],
+    'costa-mujeres': ['img/COSTA-MUJERES_CPTQ-1_31_11zon-scaled.jpg']
+  };
+
+  const galeria = imagenesPorDestino[id]?.map(img => `<img src="${img}" alt="${titulo}">`).join('') || '<p>(Sin imágenes)</p>';
+
+  document.getElementById('contenido-modal').innerHTML = `
+    <h2>${titulo}</h2>
+    <p>${descripcion}</p>
+    <div class="galeria-fotos">${galeria}</div>
+  `;
+  
+  document.getElementById('modal-destino').style.display = 'block';
+}
+
+function cerrarModal() {
+  document.getElementById('modal-destino').style.display = 'none';
+}
+</script>
 }
 window.onload = function() {
   var descripciones = document.getElementsByClassName('descripcion-destino');
