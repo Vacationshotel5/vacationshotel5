@@ -89,14 +89,22 @@
 
 
   <section id="contacto">
-    <h2>Contacto</h2>
-    <form id="contactForm">
-      <input type="text" name="nombre" placeholder="Nombre" required>
-      <input type="email" name="email" placeholder="Correo electrónico" required>
-      <textarea name="mensaje" placeholder="Mensaje" required></textarea>
-      <button type="submit">Enviar Mensaje</button>
-    </form>
-    <div class="redes">
+  <h2>Contacto</h2>
+  <form action="https://formsubmit.co/vacationshotel55@gmail.com" method="POST">
+    <input type="text" name="nombre" placeholder="Nombre" required>
+    <input type="email" name="email" placeholder="Correo electrónico" required>
+    <textarea name="mensaje" placeholder="Mensaje" required></textarea>
+    
+    <!-- Opcional: evita spam -->
+    <input type="hidden" name="_captcha" value="false">
+    
+    <!-- Opcional: redirige a otra página después del envío -->
+    <input type="hidden" name="_next" value="https://vacationshotel5.com">
+
+    <button type="submit">Enviar Mensaje</button>
+  </form>
+    
+      <div class="redes">
       <a href="https://www.facebook.com/profile.php?id=61555767188440" target="_blank">🌐 Facebook</a>
       <a href="https://www.instagram.com/vacationshotel5/" target="_blank">📸 Instagram</a>
       <a href="https://www.tiktok.com/@vacationshotel5" target="_blank">🎵 TikTok</a>
