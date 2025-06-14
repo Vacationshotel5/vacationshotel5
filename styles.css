@@ -218,7 +218,14 @@ footer {
   color: #4B0082;
   font-size: 28px;
   font-weight: bold;
-  p
+  background: none;
+  border: none;
+  cursor: pointer;
+  position: absolute;
+  top: 10px;
+  right: 15px;
+}
+
 /* === Galería de fotos en el modal === */
 .galeria-fotos {
   display: flex;
