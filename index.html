@@ -3,8 +3,10 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Vacations Hotel5</title>
+  <title>Vacations Hotel5 | Hoteles de Lujo y Destinos Exclusivos</title>
+  <meta name="description" content="Reserva hoteles de 5 estrellas en destinos exclusivos con atención personalizada. Descubre Vacations Hotel5.">
   <link rel="stylesheet" href="styles.css">
+  <link rel="icon" href="favicon.ico" type="image/x-icon">
 </head>
 <body>
   <header>
@@ -15,6 +17,7 @@
       <ul>
         <li><a href="#inicio">Inicio</a></li>
         <li><a href="#servicios">Servicios</a></li>
+        <li><a href="#destinos">Destinos</a></li>
         <li><a href="#contacto">Contacto</a></li>
       </ul>
     </nav>
@@ -47,27 +50,13 @@
   <section id="destinos">
     <h2>Destinos Exclusivos</h2>
     <div class="destinos-container">
-      <div class="destino">
-        <h3><a href="#" onclick="mostrarDescripcion('riviera-nayarit')">Riviera Nayarit (México)</a></h3>
-      </div>
-      <div class="destino">
-        <h3><a href="#" onclick="mostrarDescripcion('riviera-maya')">Riviera Maya (México)</a></h3>
-      </div>
-      <div class="destino">
-        <h3><a href="#" onclick="mostrarDescripcion('punta-cana')">Punta Cana & Cap Cana (República Dominicana)</a></h3>
-      </div>
-      <div class="destino">
-        <h3><a href="#" onclick="mostrarDescripcion('montego-bay')">Montego Bay (Jamaica)</a></h3>
-      </div>
-      <div class="destino">
-        <h3><a href="#" onclick="mostrarDescripcion('salvador')">Salvador de Bahía (Brasil)</a></h3>
-      </div>
-      <div class="destino">
-        <h3><a href="#" onclick="mostrarDescripcion('ibiza')">Ibiza (España)</a></h3>
-      </div>
-      <div class="destino">
-        <h3><a href="#" onclick="mostrarDescripcion('costa-mujeres')">Costa Mujeres (México)</a></h3>
-      </div>
+      <div class="destino"><h3><a href="#" onclick="mostrarDescripcion('riviera-nayarit')">Riviera Nayarit (México)</a></h3></div>
+      <div class="destino"><h3><a href="#" onclick="mostrarDescripcion('riviera-maya')">Riviera Maya (México)</a></h3></div>
+      <div class="destino"><h3><a href="#" onclick="mostrarDescripcion('punta-cana')">Punta Cana & Cap Cana (República Dominicana)</a></h3></div>
+      <div class="destino"><h3><a href="#" onclick="mostrarDescripcion('montego-bay')">Montego Bay (Jamaica)</a></h3></div>
+      <div class="destino"><h3><a href="#" onclick="mostrarDescripcion('salvador')">Salvador de Bahía (Brasil)</a></h3></div>
+      <div class="destino"><h3><a href="#" onclick="mostrarDescripcion('ibiza')">Ibiza (España)</a></h3></div>
+      <div class="destino"><h3><a href="#" onclick="mostrarDescripcion('costa-mujeres')">Costa Mujeres (México)</a></h3></div>
     </div>
   </section>
 
@@ -77,13 +66,8 @@
       <input type="text" name="nombre" placeholder="Nombre" required>
       <input type="email" name="email" placeholder="Correo electrónico" required>
       <textarea name="mensaje" placeholder="Mensaje" required></textarea>
-
-      <!-- Opcional: evita spam -->
       <input type="hidden" name="_captcha" value="false">
-
-      <!-- Opcional: redirige después de enviar -->
       <input type="hidden" name="_next" value="https://vacationshotel5.com">
-
       <button type="submit">Enviar Mensaje</button>
     </form>
     
@@ -98,64 +82,62 @@
     <p>&copy; 2025 Vacations Hotel5. Todos los derechos reservados.</p>
   </footer>
 
-  <!-- Modal -->
-  <div id="modal-destino" class="modal" role="dialog" aria-hidden="true">
+  <div id="modal-destino" class="modal" role="dialog" aria-modal="true" aria-hidden="true">
     <div class="modal-content" tabindex="-1">
       <button class="close-button" onclick="cerrarModal()" aria-label="Cerrar">&times;</button>
       <div id="contenido-modal"></div>
     </div>
   </div>
 
-  <!-- Script -->
   <script>
     const destinos = {
       'riviera-nayarit': {
         titulo: 'Riviera Nayarit (México)',
-        descripcion: 'A lo largo de una costa bañada por el Pacífico, esta región ofrece calas vírgenes flanqueadas por palmeras y montañas. Es el refugio ideal para los viajeros que buscan privacidad, bienestar y experiencias diseñadas a medida.',
-        imagenes:['img/riviera nayarit.jpg']
+        descripcion: 'Costa bañada por el Pacífico con calas vírgenes, ideal para privacidad y bienestar.',
+        imagenes:['img/riviera-nayarit.jpg']
       },
       'riviera-maya': {
         titulo: 'Riviera Maya (México)',
-        descripcion: 'Una franja paradisíaca que alterna jungla, cenotes y el Mar Caribe turquesa. Entre la exuberancia natural y el lujo contemporáneo, destacan villas con piscinas privadas y spas inmersos en la naturaleza.',
-        imagenes: ['img/rivera maya.jpg']
+        descripcion: 'Jungla, cenotes y el Caribe turquesa. Villas y spas inmersos en la naturaleza.',
+        imagenes: ['img/riviera-maya.jpg']
       },
       'punta-cana': {
         titulo: 'Punta Cana & Cap Cana (República Dominicana)',
-        descripcion: 'Bandas de arena blanca bordeadas por aguas cálidas y transparentes hacen de Punta Cana y Cap Cana sinónimos de elegancia tropical. En Cap Cana, la exclusividad adquiere un nuevo nivel con campos de golf de campeonato y marinas de lujo.',
-        imagenes: ['img/punta cana.jpg']
+        descripcion: 'Arena blanca, marinas de lujo, golf y elegancia tropical.',
+        imagenes: ['img/punta-cana.jpg']
       },
       'montego-bay': {
         titulo: 'Montego Bay (Jamaica)',
-        descripcion: 'Montego Bay combina tradiciones caribeñas auténticas con resorts de primera clase y servicios boutique. Rodeado de colinas y playas bañadas por el sol, es ideal para aventuras suaves como rafting o exploraciones culturales locales.',
-        imagenes: ['img/montego.jpg']
+        descripcion: 'Resorts boutique y aventuras suaves rodeadas de cultura caribeña.',
+        imagenes: ['img/montego-bay.jpg']
       },
       'salvador': {
         titulo: 'Salvador de Bahía (Brasil)',
-        descripcion: 'Una mezcla de cultura afrobrasileña, arquitectura colonial y playas doradas convierte a Salvador en un crisol de historia y ritmo.',
+        descripcion: 'Cultura afrobrasileña, playas doradas y arquitectura colonial.',
         imagenes: ['img/salvador.jpg']
       },
       'ibiza': {
         titulo: 'Ibiza (España)',
-        descripcion: 'Más allá de su fama como epicentro de fiesta, Ibiza muestra un lado íntimo y elegantísimo: calas recónditas, fincas y villas de lujo, y una escena wellness naciente.',
+        descripcion: 'Calas íntimas, villas lujosas y enfoque wellness.',
         imagenes: ['img/ibiza.jpg']
       },
       'costa-mujeres': {
         titulo: 'Costa Mujeres (México)',
-        descripcion: 'Una joya escondida al norte de Cancún, Costa Mujeres combina playas prístinas con un entorno natural casi virgen. Ideal para viajeros que buscan desconexión total y bienestar.',
-        imagenes: ['img/costa mujeres.jpg']
+        descripcion: 'Playas prístinas al norte de Cancún, rodeadas de naturaleza.',
+        imagenes: ['img/costa-mujeres.jpg']
       }
     };
 
     function mostrarDescripcion(id) {
       const destino = destinos[id];
+      const contenido = document.getElementById('contenido-modal');
       if (!destino) {
-        document.getElementById('contenido-modal').innerHTML = '<p>No se encontró información para este destino.</p>';
+        contenido.innerHTML = '<p>No se encontró información para este destino.</p>';
       } else {
         const galeria = destino.imagenes.length 
           ? destino.imagenes.map(img => `<img src="${img}" alt="${destino.titulo}">`).join('')
           : '<p>(Sin imágenes disponibles)</p>';
-
-        document.getElementById('contenido-modal').innerHTML = `
+        contenido.innerHTML = `
           <h2>${destino.titulo}</h2>
           <p>${destino.descripcion}</p>
           <div class="galeria-fotos">${galeria}</div>
@@ -164,13 +146,22 @@
       const modal = document.getElementById('modal-destino');
       modal.style.display = 'block';
       modal.setAttribute('aria-hidden', 'false');
+      document.body.style.overflow = 'hidden';
     }
 
     function cerrarModal() {
       const modal = document.getElementById('modal-destino');
       modal.style.display = 'none';
       modal.setAttribute('aria-hidden', 'true');
+      document.body.style.overflow = '';
     }
+
+    // Cerrar con tecla ESC
+    document.addEventListener('keydown', function (e) {
+      if (e.key === 'Escape') {
+        cerrarModal();
+      }
+    });
   </script>
 </body>
 </html>
