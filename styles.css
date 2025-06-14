@@ -1,0 +1,238 @@
+/* === Estilos base === */
+body {
+  margin: 0;
+  font-family: 'Georgia', serif;
+  background-color: #2e084b;
+  color: #f2c94c;
+}
+
+header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  background-color: #2e084b;
+  padding: 1rem 2rem;
+}
+
+header .logo img {
+  height: 50px;
+}
+
+nav ul {
+  list-style: none;
+  display: flex;
+  gap: 1.5rem;
+  margin: 0;
+  padding: 0;
+}
+
+nav a {
+  text-decoration: none;
+  color: #f2c94c;
+  font-weight: bold;
+}
+
+.hero {
+  text-align: center;
+  padding: 4rem 2rem;
+  background-color: #3b0d59;
+}
+
+.hero h1 {
+  font-size: 3rem;
+  margin-bottom: 1rem;
+}
+
+.hero .btn {
+  background-color: #f2c94c;
+  color: #2e084b;
+  padding: 0.75rem 1.5rem;
+  text-decoration: none;
+  border-radius: 5px;
+}
+
+#servicios {
+  padding: 2rem;
+  text-align: center;
+}
+
+.servicios-container {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  gap: 1.5rem;
+}
+
+.servicio {
+  background-color: rgba(255, 255, 255, 0.08);
+  padding: 1rem;
+  border-radius: 10px;
+  width: 250px;
+}
+
+#contacto {
+  padding: 2rem;
+  text-align: center;
+}
+
+#contactForm {
+  max-width: 400px;
+  margin: 0 auto;
+  display: flex;
+  flex-direction: column;
+  gap: 0.5rem;
+}
+
+#contactForm input,
+#contactForm textarea {
+  padding: 0.75rem;
+  border: none;
+  border-radius: 5px;
+}
+
+#contactForm button {
+  background-color: #f2c94c;
+  color: #2e084b;
+  padding: 0.75rem;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+}
+
+.redes {
+  margin-top: 1rem;
+  display: flex;
+  justify-content: center;
+  gap: 1.5rem;
+}
+
+.redes a {
+  color: #f2c94c;
+  text-decoration: none;
+  font-weight: bold;
+  font-size: 1.2rem;
+  transition: color 0.3s ease;
+}
+
+.redes a:hover {
+  color: #ffffff;
+}
+
+footer {
+  background-color: #2e084b;
+  text-align: center;
+  padding: 1rem;
+}
+
+/* === Destinos === */
+#destinos {
+  background-color: #f8f8f8;
+  padding: 40px 20px;
+  text-align: center;
+}
+
+#destinos h2 {
+  color: #4B0082;
+  font-size: 2.5em;
+  margin-bottom: 40px;
+  text-transform: uppercase;
+  letter-spacing: 2px;
+}
+
+.destinos-container {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  gap: 20px;
+}
+
+.destino {
+  background-color: #fff;
+  border: 1px solid #D4AF37;
+  border-radius: 12px;
+  padding: 25px;
+  width: 300px;
+  box-shadow: 0 8px 16px rgba(0, 0, 0, 0.15);
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.destino:hover {
+  transform: translateY(-8px);
+  box-shadow: 0 12px 24px rgba(0, 0, 0, 0.2);
+}
+
+.destino h3 {
+  color: #4B0082;
+  font-size: 1.3em;
+  margin-bottom: 15px;
+}
+
+.destino a {
+  text-decoration: none;
+  color: #4B0082;
+  font-weight: 600;
+}
+
+.destino a:hover {
+  color: #D4AF37;
+  text-decoration: underline;
+}
+
+.modal {
+  display: none;
+  position: fixed;
+  z-index: 9999;
+  left: 0;
+  top: 0;
+  width: 100%;
+  height: 100%;
+  overflow: auto;
+  background-color: rgba(0, 0, 0, 0.8);
+}
+
+.modal-content {
+  background-color: #fff;
+  margin: 10% auto;
+  padding: 20px;
+  border: 1px solid #4B0082;
+  width: 80%;
+  max-width: 700px;
+  border-radius: 12px;
+  box-shadow: 0 12px 24px rgba(0, 0, 0, 0.3);
+  position: relative;
+  font-family: 'Georgia', 'Times New Roman', serif;
+  color: #2c2c2c;
+}
+
+.close-button {
+  color: #4B0082;
+  font-size: 28px;
+  font-weight: bold;
+  background: none;
+  border: none;
+  cursor: pointer;
+  position: absolute;
+  top: 10px;
+  right: 15px;
+}
+
+.galeria-fotos {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 10px;
+  justify-content: center;
+  margin-top: 20px;
+}
+
+.galeria-fotos img {
+  width: 250px;
+  height: 180px;
+  object-fit: cover;
+  border-radius: 10px;
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.2);
+  transition: transform 0.3s ease;
+}
+
+.galeria-fotos img:hover {
+  transform: scale(1.05);
+}
