@@ -182,3 +182,69 @@ footer {
   color: #555;
   font-size: 0.95em;
   line-height: 1.5;
+  text-align: left;
+  display: none;
+  margin-top: 10px;
+}
+
+/* === Modal === */
+.modal {
+  display: none;
+  position: fixed;
+  z-index: 9999;
+  left: 0;
+  top: 0;
+  width: 100%;
+  height: 100%;
+  overflow: auto;
+  background-color: rgba(0, 0, 0, 0.8);
+}
+
+.modal-content {
+  background-color: #fff;
+  margin: 5% auto;
+  padding: 20px;
+  border: 1px solid #4B0082;
+  width: 90%;
+  max-width: 900px;
+  border-radius: 12px;
+  box-shadow: 0 12px 24px rgba(0, 0, 0, 0.3);
+  position: relative;
+  font-family: 'Georgia', 'Times New Roman', serif;
+  color: #2c2c2c;
+}
+
+.close-button {
+  color: #4B0082;
+  font-size: 28px;
+  font-weight: bold;
+  background: none;
+  border: none;
+  cursor: pointer;
+  position: absolute;
+  top: 10px;
+  right: 15px;
+}
+
+/* === Galería de fotos en el modal === */
+.galeria-fotos {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 20px;
+  justify-content: center;
+  margin-top: 30px;
+}
+
+.galeria-fotos img {
+  width: 100%;
+  max-width: 320px; /* tamaño mediano */
+  height: auto;
+  object-fit: cover;
+  border-radius: 12px;
+  box-shadow: 0 6px 12px rgba(0, 0, 0, 0.25);
+  transition: transform 0.3s ease;
+}
+
+.galeria-fotos img:hover {
+  transform: scale(1.05);
+}
