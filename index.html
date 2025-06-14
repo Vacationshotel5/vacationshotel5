@@ -148,25 +148,77 @@ function mostrarDescripcion(id) {
   document.getElementById('modal-destino').style.display = 'block';
 }
 
-</script>
-
-
-<div id="modal-destino" class="modal">
-  <div class="modal-content">
-    <span class="close-button" onclick="cerrarModal()">&times;</span>
+<!-- Modal Mejorado -->
+<div id="modal-destino" class="modal" role="dialog" aria-hidden="true">
+  <div class="modal-content" tabindex="-1">
+    <button class="close-button" onclick="cerrarModal()" aria-label="Cerrar">&times;</button>
     <div id="contenido-modal"></div>
   </div>
 </div>
 
 <script>
+const destinos = {
+  'riviera-nayarit': {
+    titulo: 'Riviera Nayarit (México)',
+    descripcion: 'A lo largo de una costa bañada por el Pacífico, esta región ofrece calas vírgenes flanqueadas por palmeras y montañas. Es el refugio ideal para los viajeros que buscan privacidad, bienestar y contacto con la naturaleza.',
+    imagenes: ['img/riviera-nayarit.jpg']
+  },
+  'riviera-maya': {
+    titulo: 'Riviera Maya (México)',
+    descripcion: 'Una franja paradisíaca que alterna jungla, cenotes y el Mar Caribe turquesa. Entre la exuberancia natural y el lujo contemporáneo, destacan villas con piscinas privadas y spas inmersos en la selva.',
+    imagenes: ['img/Rivera maya.jpg']
+  },
+  'punta-cana': {
+    titulo: 'Punta Cana & Cap Cana (República Dominicana)',
+    descripcion: 'Bandas de arena blanca bordeadas por aguas cálidas y transparentes hacen de Punta Cana y Cap Cana sinónimos de elegancia tropical. En Cap Cana, la exclusividad adquiere un nuevo nivel en sus resorts y marinas privadas.',
+    imagenes: ['img/cap cana.jpg', 'img/punta cana.jpg']
+  },
+  'montego-bay': {
+    titulo: 'Montego Bay (Jamaica)',
+    descripcion: 'Montego Bay combina tradiciones caribeñas auténticas con resorts de primera clase y servicios boutique. Rodeado de colinas y playas bañadas por el sol, es ideal para aventuras suaves y experiencias gourmet.',
+    imagenes: ['img/Montego Bay.jpg']
+  },
+  'salvador': {
+    titulo: 'Salvador de Bahía (Brasil)',
+    descripcion: 'Una mezcla de cultura afrobrasileña, arquitectura colonial y playas doradas convierte a Salvador en un crisol de historia y ritmo. Un paseo por su centro histórico revela iglesias barrocas y alegría contagiante.',
+    imagenes: ['img/Salvador de bahia.jpg']
+  },
+  'ibiza': {
+    titulo: 'Ibiza (España)',
+    descripcion: 'Más allá de su fama como epicentro de fiesta, Ibiza muestra un lado íntimo y elegantísimo: calas recónditas, fincas y villas de lujo, y una escena wellness naciente. La isla rezuma energía positiva y relax.',
+    imagenes: ['img/ibiza.jpg']
+  },
+  'costa-mujeres': {
+    titulo: 'Costa Mujeres (Cancún, México)',
+    descripcion: 'Una joya escondida al norte de Cancún, Costa Mujeres combina playas prístinas de arena blanca con un entorno natural casi virgen. Este exclusivo rincón ofrece resorts de lujo con vistas espectaculares al Caribe.',
+    imagenes: ['img/COSTA-MUJERES_CPTQ-1_31_11zon-scaled.jpg']
+  }
+};
+
 function mostrarDescripcion(id) {
-  const descripcion = document.getElementById(id).innerHTML;
-  document.getElementById('contenido-modal').innerHTML = '<h2>' + document.querySelector('#' + id).previousElementSibling.innerText + '</h2>' + descripcion + '<div class="galeria-fotos">Aquí irán tus fotos.</div>';
-  document.getElementById('modal-destino').style.display = 'block';
+  const destino = destinos[id];
+  if (!destino) {
+    document.getElementById('contenido-modal').innerHTML = '<p>No se encontró información para este destino.</p>';
+  } else {
+    const galeria = destino.imagenes.length 
+      ? destino.imagenes.map(img => `<img src="${img}" alt="${destino.titulo}">`).join('')
+      : '<p>(Sin imágenes disponibles)</p>';
+
+    document.getElementById('contenido-modal').innerHTML = `
+      <h2>${destino.titulo}</h2>
+      <p>${destino.descripcion}</p>
+      <div class="galeria-fotos">${galeria}</div>
+    `;
+  }
+  const modal = document.getElementById('modal-destino');
+  modal.style.display = 'block';
+  modal.setAttribute('aria-hidden', 'false');
 }
 
 function cerrarModal() {
-  document.getElementById('modal-destino').style.display = 'none';
+  const modal = document.getElementById('modal-destino');
+  modal.style.display = 'none';
+  modal.setAttribute('aria-hidden', 'true');
 }
 </script>
 </body>
