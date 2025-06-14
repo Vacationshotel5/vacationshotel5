@@ -1,7 +1,8 @@
+/* === Estilos base === */
 body {
   margin: 0;
   font-family: 'Georgia', serif;
-  background-color: #2e084b; /* Un violeta más sutil */
+  background-color: #2e084b;
   color: #f2c94c;
 }
 
@@ -34,7 +35,7 @@ nav a {
 .hero {
   text-align: center;
   padding: 4rem 2rem;
-  background-color: #3b0d59; /* Violeta más suave */
+  background-color: #3b0d59;
 }
 
 .hero h1 {
@@ -82,7 +83,8 @@ nav a {
   gap: 0.5rem;
 }
 
-#contactForm input, #contactForm textarea {
+#contactForm input,
+#contactForm textarea {
   padding: 0.75rem;
   border: none;
   border-radius: 5px;
@@ -122,8 +124,7 @@ footer {
   padding: 1rem;
 }
 
-
-/* Sección de Destinos */
+/* === Destinos === */
 #destinos {
   background-color: #f8f8f8;
   padding: 40px 20px;
@@ -131,9 +132,11 @@ footer {
 }
 
 #destinos h2 {
-  color: #4B0082; /* Violeta oscuro */
-  font-size: 2em;
-  margin-bottom: 30px;
+  color: #4B0082;
+  font-size: 2.5em;
+  margin-bottom: 40px;
+  text-transform: uppercase;
+  letter-spacing: 2px;
 }
 
 .destinos-container {
@@ -145,84 +148,36 @@ footer {
 
 .destino {
   background-color: #fff;
-  border: 2px solid #D4AF37; /* Dorado */
-  border-radius: 10px;
-  padding: 20px;
-  width: 250px;
-  box-shadow: 0 4px 8px rgba(0,0,0,0.1);
-  transition: transform 0.3s, border-color 0.3s;
-}
-
-.destino:hover {
-  transform: translateY(-5px);
-  border-color: #4B0082;
-}
-
-.destino h3 {
-  color: #4B0082;
-  margin-bottom: 10px;
-}
-
-.destino ul {
-  list-style: none;
-  padding: 0;
-  margin: 0;
-}
-
-.destino ul li {
-  color: #555;
-  margin: 5px 0;
-}
-
-.descripcion-destino {
-  text-align: left;
-  margin-top: 10px;
-  color: #555;
-  display: none;
-}
-.destino a {
-  color: #4B0082;
-  text-decoration: none;
-  cursor: pointer;
-}
-.destino a:hover {
-  color: #D4AF37;
-  text-decoration: underline;
-}
-
-#destinos h2 {
-  color: #4B0082;
-  font-size: 2.5em;
-  margin-bottom: 40px;
-  text-transform: uppercase;
-  letter-spacing: 2px;
-}
-.destino {
-  background-color: #fff;
   border: 1px solid #D4AF37;
   border-radius: 12px;
   padding: 25px;
   width: 300px;
-  box-shadow: 0 8px 16px rgba(0,0,0,0.15);
+  box-shadow: 0 8px 16px rgba(0, 0, 0, 0.15);
   transition: transform 0.3s ease, box-shadow 0.3s ease;
 }
+
 .destino:hover {
   transform: translateY(-8px);
-  box-shadow: 0 12px 24px rgba(0,0,0,0.2);
+  box-shadow: 0 12px 24px rgba(0, 0, 0, 0.2);
 }
+
 .destino h3 {
   color: #4B0082;
   font-size: 1.3em;
   margin-bottom: 15px;
 }
+
 .destino a {
   text-decoration: none;
   color: #4B0082;
   font-weight: 600;
 }
+
 .destino a:hover {
   color: #D4AF37;
+  text-decoration: underline;
 }
+
 .descripcion-destino {
   color: #555;
   font-size: 0.95em;
@@ -232,6 +187,7 @@ footer {
   margin-top: 10px;
 }
 
+/* === Modal === */
 .modal {
   display: none;
   position: fixed;
@@ -241,41 +197,7 @@ footer {
   width: 100%;
   height: 100%;
   overflow: auto;
-  background-color: rgba(0,0,0,0.8);
-}
-
-.modal-content {
-  background-color: #fff;
-  margin: 10% auto;
-  padding: 20px;
-  border: 1px solid #D4AF37;
-  width: 80%;
-  max-width: 700px;
-  border-radius: 12px;
-  box-shadow: 0 12px 24px rgba(0,0,0,0.3);
-  position: relative;
-}
-
-.close-button {
-  color: #4B0082;
-  font-size: 28px;
-  font-weight: bold;
-  position: absolute;
-  top: 10px;
-  right: 20px;
-  cursor: pointer;
-}
-
-.close-button:hover {
-  color: #D4AF37;
-}
-
-.galeria-fotos {
-  margin-top: 20px;
-  border-top: 1px solid #ddd;
-  padding-top: 10px;
-  font-style: italic;
-  color: #777;
+  background-color: rgba(0, 0, 0, 0.8);
 }
 
 .modal-content {
@@ -286,7 +208,7 @@ footer {
   width: 80%;
   max-width: 700px;
   border-radius: 12px;
-  box-shadow: 0 12px 24px rgba(0,0,0,0.3);
+  box-shadow: 0 12px 24px rgba(0, 0, 0, 0.3);
   position: relative;
   font-family: 'Georgia', 'Times New Roman', serif;
   color: #2c2c2c;
@@ -296,27 +218,4 @@ footer {
   color: #4B0082;
   font-size: 28px;
   font-weight: bold;
-  position: absolute;
-  top: 10px;
-  right: 20px;
-  cursor: pointer;
-}
-
-.close-button:hover {
-  color: #800080;
-}
-
-.galeria-fotos {
-  margin-top: 20px;
-  border-top: 1px solid #ddd;
-  padding-top: 10px;
-  font-style: italic;
-  color: #777;
-}
-
-#contenido-modal h2 {
-  font-size: 1.8em;
-  margin-bottom: 10px;
-  color: #4B0082;
-  font-family: 'Georgia', 'Times New Roman', serif;
-}
+  p
