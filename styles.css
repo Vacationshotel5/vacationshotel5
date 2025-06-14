@@ -219,3 +219,24 @@ footer {
   font-size: 28px;
   font-weight: bold;
   p
+/* === Galería de fotos en el modal === */
+.galeria-fotos {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 10px;
+  justify-content: center;
+  margin-top: 20px;
+}
+
+.galeria-fotos img {
+  width: 250px;
+  height: 180px;
+  object-fit: cover;
+  border-radius: 10px;
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.2);
+  transition: transform 0.3s ease;
+}
+
+.galeria-fotos img:hover {
+  transform: scale(1.05);
+}
